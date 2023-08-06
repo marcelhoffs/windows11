@@ -2,6 +2,7 @@
 # Change the execution policy before executing this script:
 # Set-ExecutionPolicy Unrestricted -Scope Process
 
+# Remove default installed apps
 Get-AppxPackage Clipchamp.Clipchamp* | Remove-AppxPackage
 Get-AppxPackage Microsoft.549981C3F5F10* | Remove-AppxPackage
 Get-AppxPackage Microsoft.BingNews* | Remove-AppxPackage
@@ -24,7 +25,6 @@ Get-AppxPackage Microsoft.WindowsFeedbackHub* | Remove-AppxPackage
 Get-AppxPackage Microsoft.WindowsMaps* | Remove-AppxPackage
 Get-AppxPackage Microsoft.WindowsSoundRecorder* | Remove-AppxPackage
 Get-AppxPackage Microsoft.Xbox.TCUI* | Remove-AppxPackage
-Get-AppxPackage Microsoft.XboxGameCallableUI* | Remove-AppxPackage
 Get-AppxPackage Microsoft.XboxGameOverlay* | Remove-AppxPackage
 Get-AppxPackage Microsoft.XboxGamingOverlay* | Remove-AppxPackage
 Get-AppxPackage Microsoft.XboxSpeechToTextOverlay* | Remove-AppxPackage
@@ -33,3 +33,7 @@ Get-AppxPackage Microsoft.ZuneMusic* | Remove-AppxPackage
 Get-AppxPackage Microsoft.ZuneVideo* | Remove-AppxPackage
 Get-AppxPackage MicrosoftCorporationII.QuickAssist* | Remove-AppxPackage
 Get-AppxPackage MicrosoftTeams* | Remove-AppxPackage
+Get-AppxPackage MicrosoftWindows.Client.WebExperience* | Remove-AppPackage
+
+# Install Chocolatey
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
