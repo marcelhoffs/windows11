@@ -33,7 +33,7 @@ Get-AppxPackage Microsoft.ZuneMusic* | Remove-AppxPackage
 Get-AppxPackage Microsoft.ZuneVideo* | Remove-AppxPackage
 Get-AppxPackage MicrosoftCorporationII.QuickAssist* | Remove-AppxPackage
 Get-AppxPackage MicrosoftTeams* | Remove-AppxPackage
-Get-AppxPackage MicrosoftWindows.Client.WebExperience* | Remove-AppPackage
+Get-AppxPackage MicrosoftWindows.Client.WebExperience* | Remove-AppxPackage
 
 # Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
